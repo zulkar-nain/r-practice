@@ -1,5 +1,5 @@
 # Create a data frame to represent the inventory of products
-
+# Inventory Valuation and Sorting
 
 inventory <- data.frame(
   product = c("Wallet", "Belt", "Keychain", "Backpack", "Cardholder"),
