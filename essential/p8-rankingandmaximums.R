@@ -8,10 +8,11 @@ employees <- data.frame(
 
 employees$performance_rank <- rank(-employees$score)
 
-print("Employees with Rankings:")
+print("Employees with Rankings:", quote = FALSE)
 print(employees)
 
 max_scores <- aggregate(score ~ dept, data = employees, FUN = max)
 
-print("\nMaximum Score per Department:")
+print("\nMaximum Score per Department:", quote = FALSE )
+
 print(max_scores)

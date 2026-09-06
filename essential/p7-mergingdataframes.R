@@ -16,4 +16,5 @@ print(merged_inner)
 
 merged_outer <- merge(students, scores, by = "student_id", all = TRUE)
 print("Full Outer Join (all = TRUE):")
-print(merged_outer)
+
+print(merged_outer, quote = FALSE)
