@@ -18,4 +18,5 @@ classify_customer <- function(amount) {
 
 customer_sales$tier <- sapply(customer_sales$sales, classify_customer)
 
+# Print the final updated data frame
 print(customer_sales)
