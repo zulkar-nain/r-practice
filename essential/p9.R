@@ -1,14 +1,14 @@
-
+#Index Finding
 
 daily_savings <- data.frame(
   day = c("Mon", "Tue", "Wed", "Thu", "Fri"),
   amount = c(50, 20, 100, 30, 45)
 )
 
-# 2. Add a running total column using cumsum()
+# Add a running total column using cumsum()
 daily_savings$running_total <- cumsum(daily_savings$amount)
 
-# 3. Find the best day using which.max()
+#Find the best day using which.max()
 best_day_index <- which.max(daily_savings$amount)
 best_day_name <- daily_savings$day[best_day_index]
 
