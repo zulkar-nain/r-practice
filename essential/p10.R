@@ -7,7 +7,11 @@ store_inventory <- data.frame(
 )
 
 #Add a stock status column using ifelse()
-store_inventory$status <- ifelse(store_inventory$stock_qty < 10, "Reorder", "OK")
+store_inventory$status <- ifelse(
+  store_inventory$stock_qty <= 0, 
+  "Out of Stock", 
+  ifelse(store_inventory$stock_qty < 10, "Reorder", "OK")
+)
 
 #Apply a 10% discount to items priced over 50
 store_inventory$discounted_price <- ifelse(
